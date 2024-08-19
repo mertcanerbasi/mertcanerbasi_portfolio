@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mertcanerbasi/screens/portfolio/components/flutter_magic_widget.dart';
 import 'package:mertcanerbasi/screens/portfolio/components/welcome_widget.dart';
 
 class PortfolioScreen extends StatelessWidget {
@@ -6,15 +7,15 @@ class PortfolioScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: SingleChildScrollView(
         primary: false,
         child: Column(
           children: [
-            const WelcomeWidget(),
-            Container(
+            WelcomeWidget(),
+            FlutterMagicWidget(),
+            SizedBox(
               height: 1000,
-              color: Colors.blue,
             ),
           ],
         ),

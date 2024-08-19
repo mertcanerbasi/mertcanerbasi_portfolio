@@ -26,7 +26,7 @@ class WelcomeWidget extends StatelessWidget {
               },
               child: Container(
                 key: ValueKey<int>(slideController.currentIndex),
-                height: 600,
+                height: 800,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(slideController
