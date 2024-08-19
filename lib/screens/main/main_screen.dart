@@ -18,16 +18,7 @@ class MainScreen extends StatelessWidget {
           ? const DesktopAppBar()
           : const MobileAppBar(),
       body: const SafeArea(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              // It takes 5/6 part of the screen
-
-              child: PortfolioScreen(),
-            ),
-          ],
-        ),
+        child: PortfolioScreen(),
       ),
     );
   }

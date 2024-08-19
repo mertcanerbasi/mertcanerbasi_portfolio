@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mertcanerbasi/controllers/slide_controller.dart';
 import 'package:mertcanerbasi/utils/constants.dart';
 import 'package:mertcanerbasi/controllers/menu_app_controller.dart';
 import 'package:mertcanerbasi/screens/main/main_screen.dart';
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(
             create: (context) => MenuAppController(),
+          ),
+          ChangeNotifierProvider(
+            create: (context) => SlideController(),
           ),
         ],
         child: const MainScreen(),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mertcanerbasi/utils/constants.dart';
 import 'package:mertcanerbasi/utils/text_styles.dart';
-import 'package:mertcanerbasi/widgets/app_button.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({

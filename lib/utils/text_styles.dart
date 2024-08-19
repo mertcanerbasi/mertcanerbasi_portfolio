@@ -26,6 +26,18 @@ class AppTextStyles {
     color: Constants.textColor,
   );
 
+  static const TextStyle w400_80 = TextStyle(
+    fontSize: 80,
+    fontWeight: FontWeight.w400,
+    color: Constants.textColor,
+  );
+
+  static const TextStyle w400_40 = TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.w400,
+    color: Constants.textColor,
+  );
+
   static const TextStyle w400_20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w400,
