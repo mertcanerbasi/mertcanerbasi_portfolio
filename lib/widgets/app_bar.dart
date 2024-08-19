@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mertcanerbasi/controllers/menu_app_controller.dart';
 import 'package:mertcanerbasi/utils/constants.dart';
 import 'package:mertcanerbasi/utils/text_styles.dart';
 import 'package:mertcanerbasi/widgets/app_button.dart';
+import 'package:provider/provider.dart';
 
 class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
   const DesktopAppBar({super.key});
@@ -26,21 +28,27 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           const Spacer(),
           AppTextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.read<MenuAppController>().scrollToSection(0);
+            },
             text: 'Portfolio',
           ),
           const SizedBox(
             width: 50,
           ),
           AppTextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.read<MenuAppController>().scrollToSection(800);
+            },
             text: 'About',
           ),
           const SizedBox(
             width: 50,
           ),
           AppTextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.read<MenuAppController>().scrollToSection(2500);
+            },
             text: 'Work',
           ),
           const SizedBox(

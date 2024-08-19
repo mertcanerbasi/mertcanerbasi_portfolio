@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mertcanerbasi/controllers/menu_app_controller.dart';
 import 'package:mertcanerbasi/utils/constants.dart';
 import 'package:mertcanerbasi/utils/text_styles.dart';
+import 'package:provider/provider.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -22,18 +24,21 @@ class SideMenu extends StatelessWidget {
             title: "Portfolio",
             press: () {
               Navigator.pop(context);
+              context.read<MenuAppController>().scrollToSection(0);
             },
           ),
           DrawerListTile(
             title: "About",
             press: () {
               Navigator.pop(context);
+              context.read<MenuAppController>().scrollToSection(800);
             },
           ),
           DrawerListTile(
             title: "Work",
             press: () {
               Navigator.pop(context);
+              context.read<MenuAppController>().scrollToSection(3250);
             },
           ),
           DrawerListTile(
