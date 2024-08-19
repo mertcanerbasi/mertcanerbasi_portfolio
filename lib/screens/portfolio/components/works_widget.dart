@@ -36,11 +36,12 @@ class WorksWidget extends StatelessWidget {
           subtitle:
               "Katıl Mobil is a social media app for creating and participating in surveys and polls, allowing you to earn money."),
       Slide(
-          image: 'images/uiuxdesign.jpg',
-          title: 'Project 6',
-          subtitle: 'Description 6'),
+          image: 'images/ustabilir.png',
+          title: 'Ustabilir',
+          subtitle:
+              "Ustabilir is a free, commission-free mobile platform that connects skilled craftsmen with those seeking their services and expertise."),
       Slide(
-          image: 'images/uiuxdesign.jpg',
+          image: 'images/moreprojects.webp',
           title: '10+ More Projects',
           subtitle:
               'More projects are also created by request and for clients.'),
@@ -172,7 +173,7 @@ class WorksWidget extends StatelessWidget {
           ),
         if (!Responsive.isDesktop(context))
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 50),
+            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [

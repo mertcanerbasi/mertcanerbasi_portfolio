@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mertcanerbasi/controllers/menu_app_controller.dart';
 import 'package:mertcanerbasi/screens/portfolio/components/flutter_magic_widget.dart';
+import 'package:mertcanerbasi/screens/portfolio/components/footer_widget.dart';
 import 'package:mertcanerbasi/screens/portfolio/components/solutions_widget.dart';
 import 'package:mertcanerbasi/screens/portfolio/components/welcome_widget.dart';
 import 'package:mertcanerbasi/screens/portfolio/components/works_widget.dart';
@@ -21,9 +22,7 @@ class PortfolioScreen extends StatelessWidget {
             FlutterMagicWidget(),
             SolutionsWidget(),
             WorksWidget(),
-            SizedBox(
-              height: 1000,
-            ),
+            FooterWidget(),
           ],
         ),
       ),
