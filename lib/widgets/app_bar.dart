@@ -4,12 +4,27 @@ import 'package:mertcanerbasi/utils/constants.dart';
 import 'package:mertcanerbasi/utils/text_styles.dart';
 import 'package:mertcanerbasi/widgets/app_button.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
   const DesktopAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Future<void> sendEmail() async {
+      final Uri emailUri = Uri(
+        scheme: 'mailto',
+        path: 'mertcanerbasiemk@gmail.com', // Replace with your email address
+        query: Uri.encodeQueryComponent('Subject=Contact%20Request'),
+      );
+
+      if (await canLaunchUrl(emailUri)) {
+        await launchUrl(emailUri);
+      } else {
+        throw 'Could not launch $emailUri';
+      }
+    }
+
     return AppBar(
       toolbarHeight: 80,
       backgroundColor:
@@ -56,7 +71,9 @@ class DesktopAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           const Spacer(),
           AppBorderedButton(
-            onPressed: () {},
+            onPressed: () {
+              sendEmail();
+            },
             text: 'Contact',
           ),
           const SizedBox(

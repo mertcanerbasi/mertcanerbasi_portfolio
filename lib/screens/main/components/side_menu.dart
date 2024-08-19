@@ -3,11 +3,26 @@ import 'package:mertcanerbasi/controllers/menu_app_controller.dart';
 import 'package:mertcanerbasi/utils/constants.dart';
 import 'package:mertcanerbasi/utils/text_styles.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart'; // Import the url_launcher package
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
     super.key,
   });
+
+  Future<void> _sendEmail() async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: 'mertcanerbasiemk@gmail.com', // Replace with your email address
+      query: Uri.encodeQueryComponent('Subject=Contact%20Request'),
+    );
+
+    if (await canLaunchUrl(emailUri)) {
+      await launchUrl(emailUri);
+    } else {
+      throw 'Could not launch $emailUri';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +60,7 @@ class SideMenu extends StatelessWidget {
             title: "Contact",
             press: () {
               Navigator.pop(context);
+              _sendEmail(); // Call the email function
             },
           ),
         ],

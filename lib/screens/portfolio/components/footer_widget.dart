@@ -7,8 +7,8 @@ class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
 
   Future<void> _launchURL(String url) async {
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url));
+    if (await canLaunch(url)) {
+      await launch(url);
     } else {
       throw 'Could not launch $url';
     }
@@ -63,6 +63,19 @@ class FooterWidget extends StatelessWidget {
                       style: AppTextStyles.w200_16),
                 ),
               ),
+              GestureDetector(
+                onTap: () => _launchURL('tel:+905455162688'),
+                child: const ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: Icon(
+                    Icons.phone,
+                    size: 30,
+                    color: Colors.white,
+                  ),
+                  title:
+                      Text("+90 545 516 26 88", style: AppTextStyles.w200_16),
+                ),
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -98,7 +111,7 @@ class FooterWidget extends StatelessWidget {
                 style: AppTextStyles.w200_16,
               ),
             ),
-            //GitHub, LinkedIn
+            //GitHub, LinkedIn, Phone Number
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -139,6 +152,25 @@ class FooterWidget extends StatelessWidget {
                         ),
                         const Text("www.linkedin.com/in/mertcanerbasi",
                             style: AppTextStyles.w200_16),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () => _launchURL('tel:+905455162688'),
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.phone,
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text("+90 545 516 26 88", style: AppTextStyles.w200_16),
                       ],
                     ),
                   ),
