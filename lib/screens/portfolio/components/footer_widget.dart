@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:mertcanerbasi/utils/responsive.dart';
 import 'package:mertcanerbasi/utils/text_styles.dart';
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
+
+  Future<void> _launchURL(String url) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,27 +34,34 @@ class FooterWidget extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              //GitHub, LinkedIn, Twitter, Instagram
-              ListTile(
-                contentPadding: EdgeInsets.zero,
-                leading: Image.asset(
-                  'images/github.png',
-                  width: 30,
-                  height: 30,
-                  color: Colors.white,
+              //GitHub, LinkedIn
+              GestureDetector(
+                onTap: () => _launchURL('https://github.com/mertcanerbasi'),
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: Image.asset(
+                    'images/github.png',
+                    width: 30,
+                    height: 30,
+                    color: Colors.white,
+                  ),
+                  title: const Text("https://github.com/mertcanerbasi",
+                      style: AppTextStyles.w200_16),
                 ),
-                title: const Text("https://github.com/mertcanerbasi",
-                    style: AppTextStyles.w200_16),
               ),
-              ListTile(
-                contentPadding: EdgeInsets.zero,
-                leading: Image.asset(
-                  'images/linkedin.webp',
-                  width: 30,
-                  height: 30,
+              GestureDetector(
+                onTap: () =>
+                    _launchURL('https://www.linkedin.com/in/mertcanerbasi'),
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: Image.asset(
+                    'images/linkedin.webp',
+                    width: 30,
+                    height: 30,
+                  ),
+                  title: const Text("www.linkedin.com/in/mertcanerbasi",
+                      style: AppTextStyles.w200_16),
                 ),
-                title: const Text("www.linkedin.com/in/mertcanerbasi",
-                    style: AppTextStyles.w200_16),
               ),
               const SizedBox(
                 height: 20,
@@ -76,50 +92,55 @@ class FooterWidget extends StatelessWidget {
                 ],
               ),
             ),
-
             const Expanded(
               child: Text(
                 '© 2021 Mertcan Erbaşı. All rights reserved.',
                 style: AppTextStyles.w200_16,
               ),
             ),
-
-            //GitHub, LinkedIn, Twitter, Instagram
+            //GitHub, LinkedIn
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Row(
-                    children: [
-                      Image.asset(
-                        'images/github.png',
-                        width: 30,
-                        height: 30,
-                        color: Colors.white,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Text("https://github.com/mertcanerbasi",
-                          style: AppTextStyles.w200_16),
-                    ],
+                  GestureDetector(
+                    onTap: () => _launchURL('https://github.com/mertcanerbasi'),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'images/github.png',
+                          width: 30,
+                          height: 30,
+                          color: Colors.white,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("https://github.com/mertcanerbasi",
+                            style: AppTextStyles.w200_16),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 10,
                   ),
-                  Row(
-                    children: [
-                      Image.asset(
-                        'images/linkedin.webp',
-                        width: 30,
-                        height: 30,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Text("www.linkedin.com/in/mertcanerbasi",
-                          style: AppTextStyles.w200_16),
-                    ],
+                  GestureDetector(
+                    onTap: () =>
+                        _launchURL('https://www.linkedin.com/in/mertcanerbasi'),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          'images/linkedin.webp',
+                          width: 30,
+                          height: 30,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("www.linkedin.com/in/mertcanerbasi",
+                            style: AppTextStyles.w200_16),
+                      ],
+                    ),
                   ),
                 ],
               ),
