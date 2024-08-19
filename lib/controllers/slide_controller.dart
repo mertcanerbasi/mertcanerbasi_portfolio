@@ -13,7 +13,6 @@ class SlideController extends ChangeNotifier {
       return;
     } else {
       _currentIndex += 1;
-
       notifyListeners();
       return;
     }

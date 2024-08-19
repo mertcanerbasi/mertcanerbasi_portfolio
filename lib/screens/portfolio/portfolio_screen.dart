@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mertcanerbasi/screens/portfolio/components/flutter_magic_widget.dart';
+import 'package:mertcanerbasi/screens/portfolio/components/solutions_widget.dart';
 import 'package:mertcanerbasi/screens/portfolio/components/welcome_widget.dart';
 
 class PortfolioScreen extends StatelessWidget {
@@ -14,6 +15,7 @@ class PortfolioScreen extends StatelessWidget {
           children: [
             WelcomeWidget(),
             FlutterMagicWidget(),
+            SolutionsWidget(),
             SizedBox(
               height: 1000,
             ),
