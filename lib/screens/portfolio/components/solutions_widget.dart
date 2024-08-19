@@ -186,7 +186,7 @@ class SolutionsWidget extends StatelessWidget {
                               children: [
                                 Text(
                                   solutions[index].title,
-                                  style: AppTextStyles.w400_20
+                                  style: AppTextStyles.w400_16
                                       .copyWith(color: Constants.accentColor),
                                 ),
                                 const SizedBox(
@@ -194,7 +194,7 @@ class SolutionsWidget extends StatelessWidget {
                                 ),
                                 Text(
                                   solutions[index].subtitle,
-                                  style: AppTextStyles.w800_16,
+                                  style: AppTextStyles.w400_14,
                                 ),
                               ],
                             ),
