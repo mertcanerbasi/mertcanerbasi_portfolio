@@ -16,7 +16,7 @@ class FlutterMagicWidget extends StatelessWidget {
           children: [
             Expanded(
               child: Image.asset(
-                "images/flutter_magic.jpg",
+                "assets/images/flutter_magic.jpg",
                 fit: BoxFit.cover,
               ),
             ),
@@ -69,13 +69,14 @@ class FlutterMagicWidget extends StatelessWidget {
           children: [
             Expanded(
               child: Image.asset(
-                "images/flutter_magic.jpg",
+                "assets/images/flutter_magic.jpg",
                 fit: BoxFit.cover,
               ),
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(50.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisAlignment: MainAxisAlignment.center,

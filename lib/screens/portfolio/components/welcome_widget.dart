@@ -41,8 +41,7 @@ class WelcomeWidget extends StatelessWidget {
                 child: Center(
                   child: Container(
                     margin: const EdgeInsets.symmetric(
-                        horizontal: 100.0, vertical: 100.0),
-                    padding: const EdgeInsets.all(20.0),
+                        horizontal: 50.0, vertical: 100.0),
                     decoration: BoxDecoration(
                       color: Constants.primaryColor.withOpacity(0.4),
                       borderRadius: BorderRadius.circular(5.0),

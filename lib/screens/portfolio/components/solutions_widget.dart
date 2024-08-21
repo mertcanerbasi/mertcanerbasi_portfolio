@@ -14,19 +14,19 @@ class SolutionsWidget extends StatelessWidget {
         title: 'Cross Platform Development',
         subtitle:
             'Create stunning apps that work seamlessly on multiple platforms.',
-        image: 'images/cross_platform.webp',
+        image: 'assets/images/cross_platform.webp',
       ),
       Slide(
         title: 'Custom app solutions',
         subtitle:
             'Tailored applications to meet your unique business needs and goals.',
-        image: 'images/custom_solution.jpg',
+        image: 'assets/images/custom_solution.jpg',
       ),
       Slide(
         title: 'UI/UX design',
         subtitle:
             'Engage users with intuitive and appealing design and layouts.',
-        image: 'images/uiuxdesign.jpg',
+        image: 'assets/images/uiuxdesign.jpg',
       ),
     ];
     if (Responsive.isDesktop(context)) {
@@ -121,7 +121,7 @@ class SolutionsWidget extends StatelessWidget {
       );
     } else {
       return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
           children: [
             IntrinsicHeight(

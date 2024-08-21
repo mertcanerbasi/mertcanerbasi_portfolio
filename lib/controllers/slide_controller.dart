@@ -27,19 +27,19 @@ class SlideController extends ChangeNotifier {
 
   final slides = [
     Slide(
-      image: 'images/welcome_bg1.jpg',
+      image: 'assets/images/welcome_bg1.jpg',
       title: 'Mertcan Erbaşı',
       subtitle:
           "Experienced Flutter | iOS Developer with 5 Years of Expertise, Over a Dozen Apps Launched, and a Strong Focus on UI/UX and Pixel-Perfect Design",
     ),
     Slide(
-      image: 'images/welcome_bg2.jpg',
+      image: 'assets/images/welcome_bg2.jpg',
       title: 'Mobile App Developer',
       subtitle:
           "Creating innovative mobile experiences with a deep understanding of the Flutter framework and modern iOS development.",
     ),
     Slide(
-      image: 'images/welcome_bg3.jpg',
+      image: 'assets/images/welcome_bg3.jpg',
       title: 'UI/UX Enthusiast',
       subtitle:
           "Committed to delivering pixel-perfect designs and seamless user experiences across all devices.",

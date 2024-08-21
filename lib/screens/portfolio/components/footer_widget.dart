@@ -7,8 +7,8 @@ class FooterWidget extends StatelessWidget {
   const FooterWidget({super.key});
 
   Future<void> _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
     } else {
       throw 'Could not launch $url';
     }
@@ -40,7 +40,7 @@ class FooterWidget extends StatelessWidget {
                 child: ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Image.asset(
-                    'images/github.png',
+                    'assets/images/github.png',
                     width: 30,
                     height: 30,
                     color: Colors.white,
@@ -55,7 +55,7 @@ class FooterWidget extends StatelessWidget {
                 child: ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Image.asset(
-                    'images/linkedin.webp',
+                    'assets/images/linkedin.webp',
                     width: 30,
                     height: 30,
                   ),
@@ -121,7 +121,7 @@ class FooterWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Image.asset(
-                          'images/github.png',
+                          'assets/images/github.png',
                           width: 30,
                           height: 30,
                           color: Colors.white,
@@ -143,7 +143,7 @@ class FooterWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Image.asset(
-                          'images/linkedin.webp',
+                          'assets/images/linkedin.webp',
                           width: 30,
                           height: 30,
                         ),
