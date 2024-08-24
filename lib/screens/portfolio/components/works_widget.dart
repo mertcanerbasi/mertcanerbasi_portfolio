@@ -21,7 +21,7 @@ class WorksWidget extends StatelessWidget {
           subtitle:
               'Gücümüz Sensin is an employee management app that allows your employees to reach out HR related information and perform various operations.'),
       Slide(
-          image: 'assets/images/miss.png',
+          image: 'assets/images/miss.jpg',
           title: 'Miss',
           subtitle:
               'Miss is an in-store sales tracking app that enables employees to manage inventory and perform various retail operations efficiently.'),
@@ -54,7 +54,7 @@ class WorksWidget extends StatelessWidget {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                'assets/images/proud_work.jpeg',
+                'assets/images/proud_work.jpg',
               ),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
